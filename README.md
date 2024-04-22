@@ -43,7 +43,7 @@ This guide details the steps to deploy an AWS EKS cluster using Terraform and th
 Before starting, ensure you have the following installed:
 - **Terraform**: [Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
 - **kubectl**: [Install kubectl](https://kubernetes.io/docs/tasks/tools/)
-- **AWS CLI**: [Install AWS CLI](https://aws.amazon.com/cli/)
+- **AWS CLI**: [Install AWS CLI][(https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)]
 - Configure AWS CLI with your credentials (`aws configure`).
 
 ## Repository Setup
