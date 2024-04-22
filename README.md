@@ -13,13 +13,13 @@ It provides:
 
 **This project is intended for educational purposes only and not for production use.**
 
-![Screenshot](/docs/images/screenshot.png)
+![Screenshot](/retail-store-sample-app/docs/images/screenshot.png)
 
 ## Application Architecture
 
 The application has been deliberately over-engineered to generate multiple de-coupled components. These components generally have different infrastructure dependencies, and may support multiple "backends" (example: Carts service supports MongoDB or DynamoDB).
 
-![Architecture](/docs/images/architecture.png)
+![Architecture](/retail-store-sample-app/docs/images/architecture.png)
 
 | Component | Language | Container Image     | Description                                                                 |
 |-----------|----------|---------------------|-----------------------------------------------------------------------------|
@@ -34,7 +34,6 @@ The application has been deliberately over-engineered to generate multiple de-co
 The steps and commands to deploy an AWS EKS cluster using the `terraform-aws-modules/eks/aws` module from Terraform.
 Cloning a repository that includes both Terraform configuration files and the application code, setting up AWS credentials, applying the infrastructure, deploying Kubernetes resources using `kubectl`, and the prerequisites needed.
 
-```markdown
 # Deploying AWS EKS Cluster with Terraform
 
 This guide details the steps to deploy an AWS EKS cluster using Terraform and then deploy a Kubernetes application.
@@ -65,7 +64,7 @@ Before starting, ensure you have the following installed:
 ## Deploying the Infrastructure
 
 1. **Create AWS Credentials**:
-   Ensure your AWS credentials are set up. This can be done by generating aws access keys and parsing them below AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY.
+   Ensure your AWS credentials are set up. This can be done by generating aws access keys and parsing them below `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`.
    ```bash
    aws configure
    ```
@@ -117,7 +116,7 @@ Before starting, ensure you have the following installed:
    terraform destroy
    ```
 
-### Docker Compose
+# Docker Compose
 
 This deployment method will run the application on your local machine using `docker-compose`, and will build the containers as part of the deployment.
 
@@ -146,8 +145,6 @@ To stop the containers in `docker compose` use Ctrl+C. To delete all the contain
 
 ```
 docker compose -f dist/docker-compose/docker-compose.yml down
-```
-
 ```
 
 ### Additional Notes:
